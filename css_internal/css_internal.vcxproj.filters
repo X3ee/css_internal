@@ -56,6 +56,9 @@
     <ClInclude Include="fnv.h">
       <Filter>util\fnv</Filter>
     </ClInclude>
+    <ClInclude Include="movement.h">
+      <Filter>hacks\movement</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -72,6 +75,9 @@
     </ClCompile>
     <ClCompile Include="netvars.cpp">
       <Filter>util\netvars</Filter>
+    </ClCompile>
+    <ClCompile Include="movement.cpp">
+      <Filter>hacks\movement</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +104,9 @@
     </Filter>
     <Filter Include="util\fnv">
       <UniqueIdentifier>{0fdef47c-7aef-4b2f-b6f5-7a211716cc52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hacks\movement">
+      <UniqueIdentifier>{28c5639d-c608-47fb-87b5-8e901a1715da}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

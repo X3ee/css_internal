@@ -3,7 +3,7 @@
 #include "sdk.h"
 #include "css.h"
 visuals g_visuals;
-
+// esp  func
 int d(CCSPlayer* player)
 {
 
@@ -30,5 +30,4 @@ void visuals::run_esp()
 			d(entity);
 	}
 }
-
 

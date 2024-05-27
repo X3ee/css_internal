@@ -160,6 +160,7 @@
     <ClInclude Include="i_engineclient.h" />
     <ClInclude Include="i_panel.h" />
     <ClInclude Include="i_surface.h" />
+    <ClInclude Include="movement.h" />
     <ClInclude Include="netvars.h" />
     <ClInclude Include="sdk.h" />
     <ClInclude Include="usercmd.h" />
@@ -173,6 +174,7 @@
     <ClCompile Include="css.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="hooks.cpp" />
+    <ClCompile Include="movement.cpp" />
     <ClCompile Include="netvars.cpp" />
     <ClCompile Include="util.cpp" />
     <ClCompile Include="visuals.cpp" />
