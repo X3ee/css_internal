@@ -11,6 +11,8 @@ namespace offsets {
     constexpr uintptr_t m_vecAbsOrigin = 0x260;
     constexpr uintptr_t m_vecAbsAngles = 0x26C;
     constexpr uintptr_t m_vecViewOffset = 0xE8;
+    static auto m_MoveType = *(uintptr_t*)(
+        util::find_pattern("client.dll", "80 BE ? ? ? ? ? 75 2D") + 2);
 } // namespace offsets
 
 
@@ -21,9 +23,15 @@ struct CBaseEntity {
         return *(int*)((uint8_t*)this + offsets::m_iHealth);
     }
 
+    int GetMoveType(void) {
+        return *(int*)((uint8_t*)this + offsets::m_MoveType);
+    }
+
     int GetTeam(void) {
         return *(int*)((uint8_t*)this + offsets::m_iTeamNum);
     }
+
+ 
 
     int GetFlags(void) {
         return *(int*)((uint8_t*)this + offsets::m_fFlags);

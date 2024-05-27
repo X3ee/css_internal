@@ -1,7 +1,8 @@
-#pragma once
-
+#include "sdk.h"
 struct movement {
-
-	void handle();
-	
+public:
+	void handle(CUserCmd* cmd);
+private:
+	void faststop(CUserCmd* cmd);
+	void bhop(CUserCmd* cmd);
 };
