@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="c_baseentity.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="css.h" />
+    <ClInclude Include="sdk.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="i_cvar.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="i_clientmode.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="i_surface.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="usercmd.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="i_engineclient.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="i_cliententitylist.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="i_baseclient.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="i_panel.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="vfunc.h" />
+    <ClInclude Include="hooks.h">
+      <Filter>hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="vmt.h">
+      <Filter>hooks\vmt</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="console.h" />
+    <ClInclude Include="visuals.h">
+      <Filter>hacks\visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="netvars.h">
+      <Filter>util\netvars</Filter>
+    </ClInclude>
+    <ClInclude Include="fnv.h">
+      <Filter>util\fnv</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="css.cpp" />
+    <ClCompile Include="util.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks.cpp">
+      <Filter>hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="console.cpp" />
+    <ClCompile Include="visuals.cpp">
+      <Filter>hacks\visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="netvars.cpp">
+      <Filter>util\netvars</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="sdk">
+      <UniqueIdentifier>{ef857fba-224c-4584-8626-aa14b6a9a8bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks">
+      <UniqueIdentifier>{33a1b5aa-9b85-481a-9f99-35cb672114f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks\vmt">
+      <UniqueIdentifier>{811e6c29-9eaf-4e8d-9b9a-f061f93b1fb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{6626b93f-262b-41e6-b97b-bab4d6fe72ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hacks">
+      <UniqueIdentifier>{ed258593-ab9b-45ff-a86a-b2b591c3cac4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hacks\visuals">
+      <UniqueIdentifier>{940beaee-e55d-475b-86a4-c41693f1313a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util\netvars">
+      <UniqueIdentifier>{9bec8f1c-58f2-48eb-baad-c0214ddaed67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util\fnv">
+      <UniqueIdentifier>{0fdef47c-7aef-4b2f-b6f5-7a211716cc52}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
