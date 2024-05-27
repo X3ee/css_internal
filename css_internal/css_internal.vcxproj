@@ -147,12 +147,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="buffer.h" />
     <ClInclude Include="console.h" />
     <ClInclude Include="c_baseentity.h" />
     <ClInclude Include="color.h" />
     <ClInclude Include="css.h" />
     <ClInclude Include="fnv.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="hde32.h" />
+    <ClInclude Include="hde64.h" />
     <ClInclude Include="hooks.h" />
     <ClInclude Include="i_baseclient.h" />
     <ClInclude Include="i_cliententitylist.h" />
@@ -161,10 +164,16 @@
     <ClInclude Include="i_engineclient.h" />
     <ClInclude Include="i_panel.h" />
     <ClInclude Include="i_surface.h" />
+    <ClInclude Include="localplayer.h" />
+    <ClInclude Include="minhook.h" />
     <ClInclude Include="movement.h" />
     <ClInclude Include="netvars.h" />
+    <ClInclude Include="pstdint.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="sdk.h" />
+    <ClInclude Include="table32.h" />
+    <ClInclude Include="table64.h" />
+    <ClInclude Include="trampoline.h" />
     <ClInclude Include="usercmd.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="vfunc.h" />
@@ -172,13 +181,19 @@
     <ClInclude Include="vmt.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="buffer.c" />
     <ClCompile Include="console.cpp" />
     <ClCompile Include="css.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="hde32.c" />
+    <ClCompile Include="hde64.c" />
+    <ClCompile Include="hook.c" />
     <ClCompile Include="hooks.cpp" />
+    <ClCompile Include="localplayer.cpp" />
     <ClCompile Include="movement.cpp" />
     <ClCompile Include="netvars.cpp" />
     <ClCompile Include="render.cpp" />
+    <ClCompile Include="trampoline.c" />
     <ClCompile Include="util.cpp" />
     <ClCompile Include="visuals.cpp" />
   </ItemGroup>

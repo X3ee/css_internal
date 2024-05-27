@@ -62,6 +62,33 @@
     <ClInclude Include="render.h">
       <Filter>render</Filter>
     </ClInclude>
+    <ClInclude Include="localplayer.h">
+      <Filter>localplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer.h">
+      <Filter>util\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook.h">
+      <Filter>util\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="trampoline.h">
+      <Filter>util\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="hde32.h">
+      <Filter>util\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="hde64.h">
+      <Filter>util\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="pstdint.h">
+      <Filter>util\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="table32.h">
+      <Filter>util\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="table64.h">
+      <Filter>util\minhook\hde</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -84,6 +111,24 @@
     </ClCompile>
     <ClCompile Include="render.cpp">
       <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="localplayer.cpp">
+      <Filter>localplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="buffer.c">
+      <Filter>util\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="hook.c">
+      <Filter>util\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="trampoline.c">
+      <Filter>util\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="hde32.c">
+      <Filter>util\minhook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="hde64.c">
+      <Filter>util\minhook\hde</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +161,15 @@
     </Filter>
     <Filter Include="render">
       <UniqueIdentifier>{40d6bfad-d183-4c96-9662-c697003f5d4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="localplayer">
+      <UniqueIdentifier>{7a83dd5c-3399-4bb6-9de7-23d7b8ce8aa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util\minhook">
+      <UniqueIdentifier>{5c302a95-94f1-466f-9a2a-ec658277d15a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util\minhook\hde">
+      <UniqueIdentifier>{298c1e97-e466-4cf4-a8d5-26bb23a9c0a8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

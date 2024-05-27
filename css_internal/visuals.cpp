@@ -3,6 +3,7 @@
 #include "sdk.h"
 #include "css.h"
 #include "render.h"
+#include "localplayer.h"
 visuals g_visuals;
 // esp  func
 
@@ -16,6 +17,14 @@ int d(CCSPlayer* player)
 void visuals::paint()
 {
 
+	this->watermark();
+
+
+	if (!localplayer.getlocalplayer())
+		return;
+
+	if (!g_css.m_engine->IsInGame())
+		return;
 }
 
 void visuals::run_esp()

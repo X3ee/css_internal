@@ -7,3 +7,4 @@ public:
 private:
 	void watermark();
 };
+extern visuals g_visuals;

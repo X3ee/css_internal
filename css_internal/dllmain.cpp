@@ -1,12 +1,10 @@
-﻿// dllmain.cpp : Определяет точку входа для приложения DLL.
-#include "css.h"
-
-
-
+﻿#include "css.h"
+#include "hooks.h"
 
 int css(HMODULE hModule) {
 
     g_css.initialize();
+    g_hooks.init();
 
     while (g_css.update()) {
         if (GetAsyncKeyState(VK_F9) & 1)

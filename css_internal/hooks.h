@@ -1,7 +1,9 @@
 #pragma once
 #include "sdk.h"
 #include "css.h"
-
+#include "vmt.h"
+#define REINTERPRET_P reinterpret_cast<void*>
+#define REINTERPRET_PP reinterpret_cast<void**>
 struct hooks {
 public:
 	void init();

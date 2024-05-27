@@ -1,10 +1,7 @@
 #pragma once
-
 #include <array>
 #include <memory.h>
-
 #include <Windows.h>
-
 #include "framework.h"
 #include <stdio.h>
 

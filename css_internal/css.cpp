@@ -1,6 +1,7 @@
 #include "css.h"
 #include "framework.h"
 #include "console.h"
+#include "localplayer.h"
 css g_css;
 
 DWORD_PTR get_module_base_address(const char* name)
@@ -47,7 +48,7 @@ void css::init_interfaces() {
   static auto devicefn = *(uintptr_t*)(
       util::find_pattern("shaderapidx9.dll", "A1 ? ? ? ? 8D 53 08") + 1);
 
-  m_device = **reinterpret_cast<IDirect3DDevice9***>(devicefn);
+  d3d_device = **reinterpret_cast<IDirect3DDevice9***>(devicefn);
 
 }
 
