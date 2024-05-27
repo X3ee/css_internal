@@ -16,7 +16,8 @@ public:
     ICvar* m_cvar;
     IClientEntityList* m_entitylist;
     IDirect3DDevice9* d3d_device;
-
+    CInput* m_input;
+    ClientMode* m_client_mode;
     bool update();
 
     void initialize();

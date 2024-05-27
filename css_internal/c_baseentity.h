@@ -3,6 +3,7 @@
 #include "util.h"
 #include "netvars.h"
 #include "css.h"
+#include "vector.h"
 
 namespace offsets {
     constexpr uintptr_t m_iHealth = 0x94;
@@ -31,11 +32,10 @@ struct CBaseEntity {
         return *(int*)((uint8_t*)this + offsets::m_iTeamNum);
     }
 
- 
-
-    int GetFlags(void) {
-        return *(int*)((uint8_t*)this + offsets::m_fFlags);
-    }
+    NETVAR(m_vecVelocity, "CBaseEntity", "m_vecVelocity",  vec3_t);
+    NETVAR(GetOrigin, "CBaseEntity", "m_vecOrigin", vec3_t);
+   // m_vecOrigin
+  
 
     float* GetAbsOrigin(void) {
         return (float*)((uint8_t*)this + offsets::m_vecAbsOrigin);
@@ -49,12 +49,12 @@ struct CBaseEntity {
         return (float*)((uint8_t*)this + offsets::m_vecViewOffset);
     }
 
-    vector GetEyePos()
+    vec3_t GetEyePos()
     {
-        vector* orig = (vector*)this->GetAbsOrigin();
-        vector* view = (vector*)this->GetViewOffset();
+        vec3_t* orig = (vec3_t*)this->GetAbsOrigin();
+        vec3_t* view = (vec3_t*)this->GetViewOffset();
 
-        vector eye = { orig->x + view->x,  orig->y + view->y,  orig->z + view->z };
+        vec3_t eye = { orig->x + view->x,  orig->y + view->y,  orig->z + view->z };
         return eye;
     }
 };
@@ -72,8 +72,8 @@ public:
     NETVAR(get_health, "CBasePlayer", "m_iHealth", std::int32_t);
     NETVAR(get_flags, "CBasePlayer", "m_fFlags", std::int32_t);
     NETVAR(get_tick_base, "CBasePlayer", "m_nTickBase", std::uint32_t);
-    NETVAR(get_aim_punch, "CBasePlayer", "m_vecPunchAngle", vector);
-    NETVAR(get_view_offset, "CBasePlayer", "m_vecViewOffset[0]", vector);
+    NETVAR(get_aim_punch, "CBasePlayer", "m_vecPunchAngle", vec3_t);
+    NETVAR(get_view_offset, "CBasePlayer", "m_vecViewOffset[0]", vec3_t);
     NETVAR(get_next_attack, "CBaseCombatCharacter", "m_flNextAttack", float);
     ClientClass* GetClientClass()
     {

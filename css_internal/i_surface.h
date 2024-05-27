@@ -47,7 +47,7 @@ typedef unsigned long HFont;
 
 class ISurface
 {
-    void DrawSetColor(const Color color) { GetVFunction<void(__thiscall*)(ISurface*, const Color)>(this, 10)(this, color); } // 0xA (10)
+    void DrawSetColor(const clr_t color) { GetVFunction<void(__thiscall*)(ISurface*, const clr_t)>(this, 10)(this, color); } // 0xA (10)
     void DrawSetColorRGB(int r, int g, int b, int a) { GetVFunction<void(__thiscall*)(ISurface*, int, int, int, int)>(this, 11)(this, r, g, b, a); } // 0xB (11)
 
     void DrawFilledRect(int x, int y, int w, int h) { GetVFunction<void(__thiscall*)(ISurface*, int, int, int, int)>(this, 12)(this, x, y, w, h); } // 0xC (12)
@@ -58,7 +58,7 @@ class ISurface
     void DrawPolyLine(int* px, int* py, int numPoints) { GetVFunction<void(__thiscall*)(ISurface*, int*, int*, int)>(this, 16)(this, px, py, numPoints); } // 0x10 (16)
 
     void DrawSetTextFont(HFont font) { GetVFunction<void(__thiscall*)(ISurface*, HFont)>(this, 17)(this, font); } // 0x11 (17)
-    void DrawSetTextColor(const Color color) { GetVFunction<void(__thiscall*)(ISurface*, const Color)>(this, 18)(this, color); } // 0x12 (18)
+    void DrawSetTextColor(const clr_t color) { GetVFunction<void(__thiscall*)(ISurface*, const clr_t)>(this, 18)(this, color); } // 0x12 (18)
     void DrawSetTextColorRGB(int r, int g, int b, int a) { GetVFunction<void(__thiscall*)(ISurface*, int, int, int, int)>(this, 19)(this, r, g, b, a); } // 0x13 (19)
     void DrawSetTextPos(int x, int y) { GetVFunction<void(__thiscall*)(ISurface*, int, int)>(this, 20)(this, x, y); } // 0x14 (20)
     void DrawGetTextPos(int& x, int& y) { GetVFunction<void(__thiscall*)(ISurface*, int&, int&)>(this, 21)(this, x, y); } // 0x15 (21)

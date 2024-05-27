@@ -4,6 +4,7 @@ class DVariant;
 class CRecvProxyData;
 class RecvProp;
 class RecvTable;
+class ClientMode;
 
 typedef void* (*CreateClientClassFn)(int entnum, int serialNum);
 typedef void* (*CreateEventFn)();
@@ -165,7 +166,19 @@ enum ClientFrameStage_t
 	FRAME_RENDER_END
 };
 
+class CInput
+{
+public:
+	char pad_0x0000[0x8C]; //0x0000
+	unsigned char N00000024; //0x008C 
+	unsigned char m_fCameraInThirdPerson; //0x008D 
+	char pad_0x008E[0x16]; //0x008E
+//	vec3_t m_angPreviousViewAngles; //0x00A4 
+	float m_flLastForwardMove; //0x00B0 
+	char pad_0x00B4[0x10]; //0x00B4
 
+
+}; //Size=0x00CC
 
 class ClientClass
 {

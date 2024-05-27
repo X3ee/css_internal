@@ -24,9 +24,7 @@ namespace util
 
 
 }
-struct vector {
-    float x, y, z;
-};
+
 
 
 inline uintptr_t get_function_by_call(std::uintptr_t address, std::uintptr_t offset, std::uintptr_t instruction_size)

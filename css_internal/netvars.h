@@ -1,6 +1,6 @@
 #pragma once
 #include "sdk.h"
-
+#include "i_baseclient.h"
 #include "fnv.h"
 
 class netvars
@@ -46,7 +46,7 @@ public:
 			offset = get_offset_by_hash(Hash);
 		return std::uintptr_t(ptr) + offset;
 	}
-
+	
 private:
 	netvars();
 	auto dump_recursive(const char* base_class, RecvTable* table, std::uint16_t offset) -> void;

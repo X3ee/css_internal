@@ -89,6 +89,12 @@
     <ClInclude Include="table64.h">
       <Filter>util\minhook\hde</Filter>
     </ClInclude>
+    <ClInclude Include="vector.h">
+      <Filter>hacks</Filter>
+    </ClInclude>
+    <ClInclude Include="i_input.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -170,6 +176,9 @@
     </Filter>
     <Filter Include="util\minhook\hde">
       <UniqueIdentifier>{298c1e97-e466-4cf4-a8d5-26bb23a9c0a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{a9667969-d331-41ce-a14a-6f67f72a102b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

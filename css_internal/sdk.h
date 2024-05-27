@@ -1,5 +1,6 @@
 #pragma once
 
+
 #include "i_panel.h"
 #include "i_clientmode.h"
 #include "i_baseclient.h"
@@ -10,6 +11,7 @@
 #include "i_cliententitylist.h"
 #include "color.h"
 #include "c_baseentity.h"
+
 
 enum MoveType_t
 {

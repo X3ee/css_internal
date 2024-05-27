@@ -51,7 +51,7 @@ void visuals::run_esp()
 void visuals::watermark()
 {
 	float color_[4] = { 255.f, 255.f, 255.f, 255.f };
-	vector x_, y_;
+	vec3_t x_, y_;
 	g_render.text("css_internal", 5, 5, g_fonts.d3d_font,
 		g_render.textcolor(color_), true, false);
 

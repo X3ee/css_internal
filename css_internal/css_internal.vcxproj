@@ -162,6 +162,7 @@
     <ClInclude Include="i_clientmode.h" />
     <ClInclude Include="i_cvar.h" />
     <ClInclude Include="i_engineclient.h" />
+    <ClInclude Include="i_input.h" />
     <ClInclude Include="i_panel.h" />
     <ClInclude Include="i_surface.h" />
     <ClInclude Include="localplayer.h" />
@@ -176,6 +177,7 @@
     <ClInclude Include="trampoline.h" />
     <ClInclude Include="usercmd.h" />
     <ClInclude Include="util.h" />
+    <ClInclude Include="vector.h" />
     <ClInclude Include="vfunc.h" />
     <ClInclude Include="visuals.h" />
     <ClInclude Include="vmt.h" />

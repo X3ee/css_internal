@@ -104,6 +104,19 @@ void render::endrenderstate(IDirect3DDevice9* device)
 	d3d_block->Apply();
 }
 
+void render::draw_rect(clr_t color, int x, int y, int w, int h) {
+	/* testing d3d9 render */
+	d3d_vertex_t v[5] = {
+		d3d_vertex_t(float(x), float(y), 1.0f, color),
+		d3d_vertex_t(float(x + w), float(y), 1.0f, color),
+		d3d_vertex_t(float(x + w), float(y + h), 1.0f, color),
+		d3d_vertex_t(float(x), float(y + h), 1.0f, color),
+		d3d_vertex_t(float(x), float(y), 1.0f, color)
+	};
+
+	d3d_device->DrawPrimitiveUP(D3DPT_LINESTRIP, 4, v, VERTEX_SIZE);
+}
+
 void render::text(std::string text, int x, int y, ID3DXFont* font, unsigned long color, bool center, bool outline)
 {
 	auto DrawTextA = [&](std::string _text, int _x, int _y, unsigned long _color) {
