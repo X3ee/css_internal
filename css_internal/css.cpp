@@ -44,7 +44,10 @@ void css::init_interfaces() {
   m_engine = reinterpret_cast<IVEngineClient*>(engine_factory("VEngineClient014", nullptr));
   m_entitylist = reinterpret_cast<IClientEntityList*>(client_factory("VClientEntityList003", nullptr));
 
+  static auto devicefn = *(uintptr_t*)(
+      util::find_pattern("shaderapidx9.dll", "A1 ? ? ? ? 8D 53 08") + 1);
 
+  m_device = **reinterpret_cast<IDirect3DDevice9***>(devicefn);
 
 }
 

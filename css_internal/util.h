@@ -19,6 +19,9 @@ namespace util
 #define getByte( x )    (getBits(x[0]) << 4 | getBits(x[1]))
 
     uintptr_t find_pattern(const char* szModule, const char* szSignature);
+   
+    int floatrgba(float value);
+
     std::uintptr_t get_rel32(std::uintptr_t address, std::uintptr_t offset, std::uintptr_t instruction_size);
     bool IsCodePtr(void* ptr);
 
@@ -27,10 +30,6 @@ namespace util
 struct vector {
     float x, y, z;
 };
-
-
-
-
 
 
 inline uintptr_t get_function_by_call(std::uintptr_t address, std::uintptr_t offset, std::uintptr_t instruction_size)

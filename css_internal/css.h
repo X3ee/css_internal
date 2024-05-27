@@ -2,7 +2,7 @@
 
 #include "sdk.h"
 typedef void* (*CreateInterfaceFn)(const char*, int*);
-
+#include "d3dx9.h"
 
 
 struct css {
@@ -16,7 +16,7 @@ public:
     ISurface* m_surface;
     ICvar* m_cvar;
     IClientEntityList* m_entitylist;
-  
+    IDirect3DDevice9* m_device;
 
     bool update();
 

@@ -59,6 +59,9 @@
     <ClInclude Include="movement.h">
       <Filter>hacks\movement</Filter>
     </ClInclude>
+    <ClInclude Include="render.h">
+      <Filter>render</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -78,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="movement.cpp">
       <Filter>hacks\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="render.cpp">
+      <Filter>render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +113,9 @@
     </Filter>
     <Filter Include="hacks\movement">
       <UniqueIdentifier>{28c5639d-c608-47fb-87b5-8e901a1715da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render">
+      <UniqueIdentifier>{40d6bfad-d183-4c96-9662-c697003f5d4e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

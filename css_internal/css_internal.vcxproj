@@ -73,6 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ReferencePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(ReferencePath)</ReferencePath>
     <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -162,6 +163,7 @@
     <ClInclude Include="i_surface.h" />
     <ClInclude Include="movement.h" />
     <ClInclude Include="netvars.h" />
+    <ClInclude Include="render.h" />
     <ClInclude Include="sdk.h" />
     <ClInclude Include="usercmd.h" />
     <ClInclude Include="util.h" />
@@ -176,6 +178,7 @@
     <ClCompile Include="hooks.cpp" />
     <ClCompile Include="movement.cpp" />
     <ClCompile Include="netvars.cpp" />
+    <ClCompile Include="render.cpp" />
     <ClCompile Include="util.cpp" />
     <ClCompile Include="visuals.cpp" />
   </ItemGroup>

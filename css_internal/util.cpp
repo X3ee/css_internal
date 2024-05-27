@@ -30,6 +30,12 @@ uintptr_t util::find_pattern(const char* szModule, const char* szSignature)
 	return NULL;
 }
 
+
+int util::floatrgba(float value)
+{
+	return value * 255;
+}
+
 std::uintptr_t util::get_rel32(std::uintptr_t address, std::uintptr_t offset, std::uintptr_t instruction_size)
 {
 	return address + *reinterpret_cast<std::uintptr_t*>(address + offset) + instruction_size;
