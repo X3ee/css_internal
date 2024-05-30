@@ -1,13 +1,13 @@
 #pragma once
 #include "framework.h"
 #include "css.h"
-struct local
+struct ctx
 {
 public:
 
 	bool m_unload;
 	bool* m_send_packet;
-	CCSPlayer* getlocalplayer();
+	CCSPlayer* local();
 
 };
-extern local localplayer;
+extern ctx g_ctx;

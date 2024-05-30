@@ -2,6 +2,7 @@
 #include "framework.h"
 #include "console.h"
 #include "localplayer.h"
+#include "hooks.h"
 css g_css;
 
 DWORD_PTR get_module_base_address(const char* name)
@@ -25,8 +26,9 @@ void css::initialize() {
   g_css.m_cvar->ConsoleColorPrintf(white, "css");
 }
 
-void css::dispose() {
+void css::destroy() {
     g_con.log("unhooked\n\n");
+    g_hooks.unhook();
     g_con.undo();
 }
 

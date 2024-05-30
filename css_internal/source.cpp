@@ -7,12 +7,12 @@ int css(HMODULE hModule) {
     g_hooks.init();
 
     while (g_css.update()) {
-        if (GetAsyncKeyState(VK_F9) & 1)
+        if (GetAsyncKeyState(0x78) & 1)
             break;
         Sleep(100);
     }
 
-    g_css.dispose();
+    g_css.destroy();
 
 
     FreeLibraryAndExitThread(hModule, 0);

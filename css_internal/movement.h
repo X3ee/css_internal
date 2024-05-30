@@ -6,6 +6,7 @@ public:
 	CUserCmd* m_ucmd{ };
 	void handle(CUserCmd* cmd);
 	void bhop();
+	void jumpikiii();
 private:
 	void faststop(CUserCmd* cmd);
 	

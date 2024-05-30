@@ -172,6 +172,7 @@
     <ClInclude Include="pstdint.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="sdk.h" />
+    <ClInclude Include="server.h" />
     <ClInclude Include="table32.h" />
     <ClInclude Include="table64.h" />
     <ClInclude Include="trampoline.h" />
@@ -186,7 +187,7 @@
     <ClCompile Include="buffer.c" />
     <ClCompile Include="console.cpp" />
     <ClCompile Include="css.cpp" />
-    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="source.cpp" />
     <ClCompile Include="hde32.c" />
     <ClCompile Include="hde64.c" />
     <ClCompile Include="hook.c" />

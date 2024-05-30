@@ -3,9 +3,10 @@
 movement g_movement;
 void movement::handle(CUserCmd* cmd)
 {
-	if (!g_css.m_engine->IsConnected() && !g_css.m_engine->IsInGame())
-		return;
-	bhop();
+ if (!g_css.m_engine->IsConnected() && !g_css.m_engine->IsInGame())
+ return;
+ bhop();
+	//jumpikiii();
 }
 
 /*
@@ -19,21 +20,21 @@ void movement::faststop(CUserCmd* cmd)
 
 void movement::bhop()
 {
-
-	if (localplayer.getlocalplayer()->GetMoveType() == MOVETYPE_LADDER ||
-		localplayer.getlocalplayer()->GetMoveType() == MOVETYPE_NOCLIP)
+	/* need make gucci method */
+	if (g_ctx.local()->GetMoveType() == MOVETYPE_LADDER ||
+		g_ctx.local()->GetMoveType() == MOVETYPE_NOCLIP)
 		return;
 
-	if (m_ucmd->buttons & IN_JUMP && !(localplayer.getlocalplayer()->get_flags() & FL_ONGROUND)) {
+	if (m_ucmd->buttons & IN_JUMP && !(g_ctx.local()->GetFlags() & FL_ONGROUND)) {
 		m_ucmd->buttons &= ~IN_JUMP;
 	}
 }
-/*
-void movement::jumpikiii()
+
+/*void movement::jumpikiii()
 {
 	
 	static auto sv_airaccelerate = g_css.m_cvar->FindVar(("sv_airaccelerate"));
-	static bool was_onground = localplayer.getlocalplayer()->GetFlags() & FL_ONGROUND;
+	static bool was_onground = g_ctx.local()->GetFlags() & FL_ONGROUND;
 	static vec3_t last_origin{ };
 	static float ground_vel{ };
 	static float last_jump_max_speed{ };
@@ -90,5 +91,4 @@ void movement::jumpikiii()
 			last_height = delta;
 		}
 	}
-}
-*/
+}*/

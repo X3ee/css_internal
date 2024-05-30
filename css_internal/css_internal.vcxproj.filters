@@ -95,9 +95,12 @@
     <ClInclude Include="i_input.h">
       <Filter>sdk</Filter>
     </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="source.cpp" />
     <ClCompile Include="css.cpp" />
     <ClCompile Include="util.cpp">
       <Filter>util</Filter>

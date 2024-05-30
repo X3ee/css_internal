@@ -1,8 +1,8 @@
 #include "localplayer.h"
 
-local localplayer;
+ctx LocalPlayer;
 
-CCSPlayer* local::getlocalplayer()
+CCSPlayer* ctx::local()
 {
 	return reinterpret_cast<CCSPlayer*>(g_css.m_entitylist->GetClientEntity(g_css.m_engine->GetLocalPlayer()));
 }

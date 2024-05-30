@@ -22,8 +22,8 @@ public:
 
     void initialize();
 
-    void dispose();
-    // Stuff
+    void destroy();
+    
     void init_interfaces();
 };
 extern css g_css;
