@@ -16,6 +16,8 @@ namespace util
 #define getByte( x )    (getBits(x[0]) << 4 | getBits(x[1]))
 
     uintptr_t find_pattern(const char* szModule, const char* szSignature);
+
+    DWORD_PTR getmodulebase(const char* name);
    
     int floatrgba(float value);
 

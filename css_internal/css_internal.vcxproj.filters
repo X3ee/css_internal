@@ -62,7 +62,7 @@
     <ClInclude Include="render.h">
       <Filter>render</Filter>
     </ClInclude>
-    <ClInclude Include="localplayer.h">
+    <ClInclude Include="ctx.h">
       <Filter>localplayer</Filter>
     </ClInclude>
     <ClInclude Include="buffer.h">
@@ -98,6 +98,9 @@
     <ClInclude Include="server.h">
       <Filter>sdk</Filter>
     </ClInclude>
+    <ClInclude Include="interfaces.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source.cpp" />
@@ -121,7 +124,7 @@
     <ClCompile Include="render.cpp">
       <Filter>render</Filter>
     </ClCompile>
-    <ClCompile Include="localplayer.cpp">
+    <ClCompile Include="ctx.cpp">
       <Filter>localplayer</Filter>
     </ClCompile>
     <ClCompile Include="buffer.c">
@@ -138,6 +141,9 @@
     </ClCompile>
     <ClCompile Include="hde64.c">
       <Filter>util\minhook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="interfaces.cpp">
+      <Filter>sdk</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

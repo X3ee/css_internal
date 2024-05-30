@@ -1,9 +1,9 @@
 #include "movement.h"
-#include "localplayer.h"
+#include "ctx.h"
 movement g_movement;
 void movement::handle(CUserCmd* cmd)
 {
- if (!g_css.m_engine->IsConnected() && !g_css.m_engine->IsInGame())
+ if (!g_interfaces.m_engine->IsConnected() && !g_interfaces.m_engine->IsInGame())
  return;
  bhop();
 	//jumpikiii();

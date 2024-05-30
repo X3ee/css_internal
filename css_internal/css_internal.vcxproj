@@ -157,6 +157,7 @@
     <ClInclude Include="hde32.h" />
     <ClInclude Include="hde64.h" />
     <ClInclude Include="hooks.h" />
+    <ClInclude Include="interfaces.h" />
     <ClInclude Include="i_baseclient.h" />
     <ClInclude Include="i_cliententitylist.h" />
     <ClInclude Include="i_clientmode.h" />
@@ -165,7 +166,7 @@
     <ClInclude Include="i_input.h" />
     <ClInclude Include="i_panel.h" />
     <ClInclude Include="i_surface.h" />
-    <ClInclude Include="localplayer.h" />
+    <ClInclude Include="ctx.h" />
     <ClInclude Include="minhook.h" />
     <ClInclude Include="movement.h" />
     <ClInclude Include="netvars.h" />
@@ -187,12 +188,13 @@
     <ClCompile Include="buffer.c" />
     <ClCompile Include="console.cpp" />
     <ClCompile Include="css.cpp" />
+    <ClCompile Include="interfaces.cpp" />
     <ClCompile Include="source.cpp" />
     <ClCompile Include="hde32.c" />
     <ClCompile Include="hde64.c" />
     <ClCompile Include="hook.c" />
     <ClCompile Include="hooks.cpp" />
-    <ClCompile Include="localplayer.cpp" />
+    <ClCompile Include="ctx.cpp" />
     <ClCompile Include="movement.cpp" />
     <ClCompile Include="netvars.cpp" />
     <ClCompile Include="render.cpp" />

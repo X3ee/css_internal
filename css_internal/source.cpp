@@ -1,18 +1,18 @@
 ﻿#include "css.h"
 #include "hooks.h"
-
-int css(HMODULE hModule) {
-
-    g_css.initialize();
+#include "interfaces.h"
+int cheat(HMODULE hModule) {
+    g_interfaces.init();
+    css::initialize();
     g_hooks.init();
 
-    while (g_css.update()) {
+    while (css::update()) {
         if (GetAsyncKeyState(0x78) & 1)
             break;
         Sleep(100);
     }
 
-    g_css.destroy();
+    css::destroy();
 
 
     FreeLibraryAndExitThread(hModule, 0);
@@ -22,7 +22,7 @@ int css(HMODULE hModule) {
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
     switch (ul_reason_for_call) {
     case DLL_PROCESS_ATTACH:
-        CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)css, hModule, NULL, NULL);
+        CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)cheat, hModule, NULL, NULL);
         break;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:

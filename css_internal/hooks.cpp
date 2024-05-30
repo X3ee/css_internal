@@ -3,9 +3,9 @@
 #include "visuals.h"
 #include "render.h"
 #include "movement.h"
-#include "localplayer.h"
 #include <mutex>
 #include "minhook.h"
+#include "ctx.h"
 hooks g_hooks;
 using present_fn = long(__stdcall*)(IDirect3DDevice9*, RECT*, RECT*, HWND, RGNDATA*);
 present_fn  
@@ -72,8 +72,8 @@ void __declspec(naked) __stdcall hook_createmove(int sequence_number, float inpu
 
 void hooks::init()
 {
-	MH_CreateHook(REINTERPRET_P(get_virtual(g_css.d3d_device, 17)), present_h, REINTERPRET_PP(&present_original));
-	MH_CreateHook(REINTERPRET_P(get_virtual(g_css.m_client_mode, 21)), hook_createmove, REINTERPRET_PP(&create_move_original));
+	MH_CreateHook(REINTERPRET_P(get_virtual(g_interfaces.d3d_device, 17)), present_h, REINTERPRET_PP(&present_original));
+	MH_CreateHook(REINTERPRET_P(get_virtual(g_interfaces.m_client_mode, 21)), hook_createmove, REINTERPRET_PP(&create_move_original));
 }
 
 void hooks::unhook()

@@ -30,6 +30,19 @@ uintptr_t util::find_pattern(const char* szModule, const char* szSignature)
 	return NULL;
 }
 
+DWORD_PTR util::getmodulebase(const char* name)
+{
+	HMODULE m = GetModuleHandleA(name);
+
+	if (m == 0)
+		return 0;
+
+	MODULEINFO module_info;
+	GetModuleInformation(GetCurrentProcess(), m, &module_info, sizeof(module_info));
+
+	return (DWORD_PTR)module_info.lpBaseOfDll;
+}
+
 
 int util::floatrgba(float value)
 {

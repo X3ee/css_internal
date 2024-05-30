@@ -68,13 +68,13 @@ public:
 class CBasePlayer : public CBaseAnimating
 {
 public:
-    NETVAR(get_life_state, "CBasePlayer", "m_lifeState", std::uint8_t);
-    NETVAR(get_health, "CBasePlayer", "m_iHealth", std::int32_t);
+    NETVAR(GetLifeState, "CBasePlayer", "m_lifeState", std::uint8_t);
+    NETVAR(GetHealth, "CBasePlayer", "m_iHealth", std::int32_t);
     NETVAR(GetFlags, "CBasePlayer", "m_fFlags", std::int32_t);
-    NETVAR(get_tick_base, "CBasePlayer", "m_nTickBase", std::uint32_t);
-    NETVAR(get_aim_punch, "CBasePlayer", "m_vecPunchAngle", vec3_t);
-    NETVAR(get_view_offset, "CBasePlayer", "m_vecViewOffset[0]", vec3_t);
-    NETVAR(get_next_attack, "CBaseCombatCharacter", "m_flNextAttack", float);
+    NETVAR(GetTickBase, "CBasePlayer", "m_nTickBase", std::uint32_t);
+    NETVAR(GetAimPunch, "CBasePlayer", "m_vecPunchAngle", vec3_t);
+    NETVAR(GetViewOffset, "CBasePlayer", "m_vecViewOffset[0]", vec3_t);
+    NETVAR(GetNextAttack, "CBaseCombatCharacter", "m_flNextAttack", float);
     ClientClass* GetClientClass()
     {
         typedef ClientClass* (__thiscall* get_clientclass_fn)(void*);

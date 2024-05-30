@@ -3,7 +3,7 @@
 #include "sdk.h"
 #include "css.h"
 #include "render.h"
-#include "localplayer.h"
+#include "ctx.h"
 visuals g_visuals;
 
 void visuals::paint()
@@ -15,7 +15,7 @@ void visuals::paint()
 	if (!g_ctx.local())
 		return;
 
-	if (!g_css.m_engine->IsInGame())
+	if (!g_interfaces.m_engine->IsInGame())
 		return;
 }
 
@@ -27,13 +27,13 @@ int d(CCSPlayer* player)
 
 void visuals::run_esp()
 {
-	auto local = reinterpret_cast<CCSPlayer*>(g_css.m_entitylist->GetClientEntity(g_css.m_engine->GetLocalPlayer()));
+	auto local = reinterpret_cast<CCSPlayer*>(g_interfaces.m_entitylist->GetClientEntity(g_interfaces.m_engine->GetLocalPlayer()));
 	if (!local)
 		return;
 
-	for (auto i = 0; i < g_css.m_entitylist->GetHighestEntityIndex(); i++)
+	for (auto i = 0; i < g_interfaces.m_entitylist->GetHighestEntityIndex(); i++)
 	{
-		auto entity = reinterpret_cast<CCSPlayer*>(g_css.m_entitylist->GetClientEntity(i));
+		auto entity = reinterpret_cast<CCSPlayer*>(g_interfaces.m_entitylist->GetClientEntity(i));
 		if (!entity || entity->IsDormant())
 			continue;
 
